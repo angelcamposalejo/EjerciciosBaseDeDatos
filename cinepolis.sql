@@ -18,3 +18,15 @@ CREATE TABLE cine (
     FOREIGN KEY (id_movie)
         REFERENCES movie (id_movie)
 );
+CREATE TABLE amigos (
+    id_amigo INT(10) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    id_movie INT(10) NOT NULL,
+    nombre_movie VARCHAR(50) NOT NULL,
+    id_cine INT(10) NOT NULL,
+    nombre_cine VARCHAR(50) NOT NULL,
+    FOREIGN KEY (id_movie)
+        REFERENCES movie (id_movie),
+    FOREIGN KEY (id_cine)
+        REFERENCES cine (id_cine)
+);
