@@ -30,3 +30,22 @@ CREATE TABLE amigos (
     FOREIGN KEY (id_cine)
         REFERENCES cine (id_cine)
 );
+insert into movie(movie,duracion,clasificacion,subtitulos,lenguaje,raiting)values
+('señor de los anillos 1',280,'B','Espanol','Ingles','*****'),
+('señor de los anillos 2',270,'B','Espanol','Ingles','*****'),
+('señor de los anillos 3',290,'B','Espanol','Ingles','*****'),
+('Avengers 1',220,'B','Espanol','Ingles','*****'),
+('Avengers 2',280,'B','Espanol','Ingles','*****')
+;
+insert into cine(nombre,ciudad,estado,id_movie)values
+('Parque Celaya','Celaya','Guanajuato',1),
+('Galerias Celaya','Celaya','Guanajuato',2),
+('Veleros Celaya','Celaya','Guanajuato',1),
+('Galerias Qro','Queretaro','Queretaro',2),
+('Qro Estadio','Queretaro','Queretaro',1);
+insert into amigos(nombre,id_movie,nombre_movie,id_cine,nombre_cine)values
+('angel',1,'Señor de los anillos 1',1,'Parque Celaya'),
+('angel',1,'Señor de los anillos 1',3,'Veleros Celaya'),
+('angel',1,'Señor de los anillos 1',1,'Qro Estadio'),
+('angel',2,'Señor de los anillos 2',2,'Galerias Celaya'),
+('angel',2,'Señor de los anillos 2',4,'Galerias Qro');
